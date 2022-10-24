@@ -20,7 +20,8 @@ const router = new Router({
       component: () => import('@/views/home.vue'),
       redirect: '/guanli',
       children: [
-        { path: '/guanli', component: () => import('@/views/guanli.vue') }
+        { path: '/guanli', component: () => import('@/views/guanli.vue') },
+        { path: '/guan', component: () => import('@/views/guan.vue') }
       ]
     }
   ]
@@ -29,15 +30,15 @@ const router = new Router({
 
 //挂载路由导航守卫
 //to是我们跳转的路径，from是来自的路径，next为放行函数
-router.beforeEach((to, from, next) => {
+/* router.beforeEach((to, from, next) => {
   //如果用户访问登录页，直接放行
   if (to.path === "/login") return next();
-  //从sessionStorage中获取到保存的token值
+  //从localStorage中获取到保存的token值
   const tokenStr = window.localStorage.getItem("token");
   //没有token，强制跳转到登录页面
   if (!tokenStr) return next("/login");
   next();//有token，直接放行
-})
+}) */
 
 
 export default router

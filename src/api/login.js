@@ -19,12 +19,12 @@ export function getInfo(params) {
   })
 } */
 
-export default {
+/* export default {
   liebiao: {
     getList: {
       method: 'post',
       url: '/api/bos/web/order/query'
     }
   }
-}
+} */
 

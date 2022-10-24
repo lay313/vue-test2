@@ -78,30 +78,7 @@ export default {
         console.log(this.$router);
         this.$router.push({path: "/home"});
       });
-      /* this.$axios({
-        method: 'post',
-        url: '/api/bos/authentication/login',
-        data: this.loginForm
-      }).then(res=>{
-        this.$cookies.set("oatoken",res.data.data.token,'7d')
-        this.$router.push('@/home')
-      }).catch(error=>{
-        console.log(error)
-      }) */
     },
-    /* login() {
-      this.$http
-        .post(" /api/bos/authentication/login ", {
-          this.loginForm
-        })
-        .then((res) => {
-          if (res.data.code == 200) {
-            var token = res.data.token;
-            window.localStorage.setItem("token", token);
-            this.$router.push({ path: "@/home" });
-          }
-        });
-    }, */
   },
   mounted() {
     this.login();

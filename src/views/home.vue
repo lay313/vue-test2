@@ -1,6 +1,7 @@
 <template>
   <el-container class="home-container">
     <el-header>xxx管理系统</el-header>
+    <el-button @click="out">退出</el-button>
     <el-container>
       <el-aside width="200px">
         <el-row>
@@ -11,11 +12,10 @@
                   <i class="el-icon-setting"></i>商品管理
                 </span>
                 <el-menu-item-group>
-                  <el-menu-item @click="getMenuList">aaa</el-menu-item>
-                  <!-- <el-menu-item>bbb</el-menu-item> -->
+                  <el-menu-item index="/guanli">aaa</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
-              <!-- <el-submenu index="2">
+              <el-submenu index="2">
                 <template slot="title">
                   <i class="el-icon-setting"></i>订单管理
                 </template>
@@ -28,9 +28,9 @@
                   <i class="el-icon-setting"></i>用户管理
                 </template>
                 <el-menu-item-group>
-                  <el-menu-item>选项3</el-menu-item>
+                  <el-menu-item index="/guan">yh</el-menu-item>
                 </el-menu-item-group>
-              </el-submenu> -->
+              </el-submenu>
             </el-menu>
           </el-col>
         </el-row>
@@ -64,6 +64,10 @@ export default {
       console.log(res); */
       /* this.$router.push({path: "/guanli"}); */
     },
+    out() {
+      /* window.localStorage.clear(); */
+      this.$router.push('/login');
+    }
   },
 };
 </script>

@@ -8,12 +8,12 @@
         <el-col :span="5">
           <el-input  placeholder="123"></el-input>
         </el-col>
-        <el-col :span="5">
+        <!-- <el-col :span="5">
           <el-input placeholder="名称"></el-input>
         </el-col>
         <el-col :span="5">
           <el-input  placeholder="123"></el-input>
-        </el-col>
+        </el-col> -->
         <el-col :span="10">
           <el-button @click="getList">cx</el-button>
           <el-button>cz</el-button>
@@ -44,7 +44,7 @@ export default {
       tableData: [
         /* toolbar: [],
         data: [],
-        pageInfo: { pageNo: 1, pageSize: 10, totalCount: 0 }, */
+        pageInfo: { pageNo: 1, pageSize: 10, totalCount: 0 } */
       ],
       queryInfo: {
         /* workerId: '',
@@ -90,12 +90,12 @@ export default {
       this.tableData.pageInfo.pageNo = 1;
       this.loadData();
     },
-    async getList() {
+    /* async getList() {
       const { data: res } = await axios.post("/api/bos/web/order/query", {
         params: this.queryInfo,
       });
       console.log(res);
-    }
+    } */
   },
 };
 </script>
