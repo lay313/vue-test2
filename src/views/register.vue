@@ -14,7 +14,7 @@
         <el-input placeholder="password" type="password" show-password />
       </el-form-item>
       <el-form-item>
-        <el-button type="primary">注册</el-button>
+        <el-button type="primary">注册123</el-button>
         <el-button >取消</el-button>
       </el-form-item>
     </el-form>
